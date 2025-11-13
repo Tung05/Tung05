@@ -5,6 +5,29 @@ title: "Home"
 
 # Hello — I'm Tung 👋
 
+I’m a senior studying Computer Science at UMass Amherst.  
+This site showcases my **security labs**, **CTF writeups**, and **projects**.
+
+---
+
+## 🔗 Navigation
+- [Projects](/projects/)
+- [GitHub](https://github.com/Tung05)
+- [LinkedIn](https://www.linkedin.com/in/tung0510/)
+
+---
+
+## 🌟 Featured Project
+- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](/projects/theopenvasprojectname.md)
+
+
+<!-- ---
+layout: home
+title: "Home"
+---
+
+# Hello — I'm Tung 👋
+
 I’m a senior at the University of Massachusetts Amherst studying Computer Science.  
 I’m passionate about **cybersecurity research**, **penetration testing**, and building **secure and efficient systems**.  
 This site showcases my **security labs**, **CTF writeups**, and **projects**.
@@ -35,4 +58,4 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
 ## 📫 Connect with Me
 
-[LinkedIn](https://www.linkedin.com/in/tung0510/) | [GitHub](https://github.com/Tung05) | ✉️ tung051024@gmail.com
+[LinkedIn](https://www.linkedin.com/in/tung0510/) | [GitHub](https://github.com/Tung05) | ✉️ tung051024@gmail.com -->
