@@ -1,15 +1,9 @@
 title: "Tung Nguyen — Portfolio"
 email: tung051024@gmail.com
 description: "Security student — lab reports, projects, and write-ups."
-baseurl: ""
+baseurl: "/Tung05"   # or "" if it's your main GitHub page
 url: "https://tung05.github.io"
 theme: minima
-nav:
-  - title: "Home"
-    url: /
-  - title: "Projects"
-    url: /projects/
 paginate: 5
 exclude:
   - README.md
-
