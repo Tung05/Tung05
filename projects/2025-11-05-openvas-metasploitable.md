@@ -41,6 +41,7 @@ Perform discovery and vulnerability remediation on a Metasploitable VM using Gre
 ## Table of Contents
 - [Vulnerability: Ingreslock Backdoor (Port 1524)](#vuln-ingreslock-backdoor-port-1524)  
 - [Vulnerability: Rexec / r-services (Port 512)](#vulnerability-rexec-r-services-port-512)  
+- [Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)](#vulnerability-mysql-mariadb-default-credentials-port-3306)
 
 ---
 
