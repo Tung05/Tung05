@@ -85,6 +85,7 @@ A line in `/etc/inetd.conf` mapped the `ingreslock` service to `/bin/bash` and r
 2. Reboot to apply the change.
 3. Scan again using nmap to make sure the port is closed and unable to netcat to it anymore.
 
+---
 
 ### Vulnerability: Rexec / r‑services (Port 512)
 
@@ -111,3 +112,29 @@ The `rexec` service was enabled via the system's `inetd` configuration. Because 
 1. Removed/disabled the `rexec` entry (`exec stream tcp nowait root /usr/sbin/tcpd /usr/sbin/in.rexecd`) from the inetd configuration.
 2. Reboot to apply the change.
 3. Scan again using nmap to make sure the port is closed.
+
+---
+
+### Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)
+
+**Severity:** High  
+**OpenVAS ID / Reference:** NVT – *MySQL / MariaDB Default Credentials (MySQL Protocol)*
+
+**Description (short):**  
+The MySQL server allowed authentication as `root` with an empty password, permitting administrative access to the database service.
+
+**Evidence (pre-remediation):**
+- OpenVAS finding screenshot:  
+  ![OpenVAS MySQL finding](../images/mysql-openvas.png)
+- Lab test: successful login as `root` with no password (before remediation):  
+  ![Successful login without password](../images/mysql-test-login.png)
+
+**Root cause analysis:**  
+The MySQL instance was left with a blank/weak root password and accepted remote connections. This allowed unauthenticated administrative access. On many intentionally vulnerable images (like Metasploitable) default credentials are present for testing, but on real systems this represents a critical misconfiguration.
+
+**Remediation performed:**  
+1. Logged into the MySQL server locally (lab) and set a strong root password. 
+2. Test login again without password -> Failed
+![Change password and test login without it](../images/mysql-change-password.png)
+3. Test login again with password -> Success
+![Successful login with the correct password](../images/mysql-test-login.png)
