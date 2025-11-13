@@ -10,12 +10,10 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
 ---
 
-## 🔗 Navigation
-- [Projects](/projects/)
-- [GitHub](https://github.com/Tung05)
-- [LinkedIn](https://www.linkedin.com/in/tung0510/)
+## 🌟 Featured Project
+- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](/projects/theopenvasprojectname.md)
 
 ---
 
-## 🌟 Featured Project
-- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](/projects/theopenvasprojectname.md)
+## 📫 Let’s connect 
+[LinkedIn](https://www.linkedin.com/in/tung0510/) | ✉️ tung051024@gmail.com | 📱 413-275-0693
