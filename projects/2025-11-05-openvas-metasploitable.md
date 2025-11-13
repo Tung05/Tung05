@@ -39,7 +39,7 @@ Perform discovery and vulnerability remediation on a Metasploitable VM using Gre
 ---
 
 ## Table of Contents
-- [Vulnerability: Ingreslock Backdoor (Port 1524)](#vuln-ingreslock-backdoor-port-1524)  
+- [Vulnerability: Ingreslock Backdoor (Port 1524)](#vulnerability-ingreslock-backdoor-port-1524)  
 - [Vulnerability: Rexec / r-services (Port 512)](#vulnerability-rexec-r-services-port-512)  
 - [Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)](#vulnerability-mysql-mariadb-default-credentials-port-3306)
 
@@ -63,7 +63,7 @@ nmap -sT -p 1-65535 <target-ip>
 
 ---
 
-### Vulnerability: Ingreslock Backdoor (Port 1524)
+### Vulnerability: Ingreslock Backdoor (Port 1524) {#vulnerability-ingreslock-backdoor-port-1524}
 **Severity:** High  
 **OpenVAS ID / Reference:** NVT – *TCP Port 1524: Ingreslock Backdoor*
 
@@ -88,7 +88,7 @@ A line in `/etc/inetd.conf` mapped the `ingreslock` service to `/bin/bash` and r
 
 ---
 
-### Vulnerability: Rexec / r‑services (Port 512)
+### Vulnerability: Rexec / r‑services (Port 512) {#vulnerability-rexec-r-services-port-512}
 
 **Severity:** High  
 **OpenVAS ID / Reference:** NVT – *TCP Port 512: rexec (r‑services)*
@@ -116,7 +116,7 @@ The `rexec` service was enabled via the system's `inetd` configuration. Because 
 
 ---
 
-### Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)
+### Vulnerability: MySQL / MariaDB Default Credentials (Port 3306) {#vulnerability-mysql-mariadb-default-credentials-port-3306}
 
 **Severity:** High  
 **OpenVAS ID / Reference:** NVT – *MySQL / MariaDB Default Credentials (MySQL Protocol)*
