@@ -1,7 +1,10 @@
 title: "Tung Nguyen — Portfolio"
 email: tung051024@gmail.com
 description: "Security student — lab reports, projects, and write-ups."
-baseurl: "" # leave empty
-url: "https://tung05.github.io/Tung05/" # change USER
+# For a project site (username.github.io/REPO) set baseurl to the repo name
+# and url to the site root. This ensures links and the homepage render properly.
+baseurl: "/Tung05"
+# Use the root user/pages URL (no repo suffix)
+url: "https://tung05.github.io"
 theme: minima   # simple built-in theme; you can change later
 paginate: 5
