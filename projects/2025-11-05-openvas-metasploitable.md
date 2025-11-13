@@ -1,6 +1,7 @@
 ---
 title: "OpenVAS scan & Ingreslock remediation"
 date: 2025-11-05
+layout: post
 ---
 
 # Lab: Kali (OpenVAS) → Metasploitable scan & remediation
