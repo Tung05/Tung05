@@ -18,4 +18,4 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 ---
 
 ## 🌟 Featured Project
-- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](projects/2025-11-05-openvas-metasploitable.md)
+- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](/projects/theopenvasprojectname.md)
