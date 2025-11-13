@@ -1,9 +1,10 @@
-title: "Tung Nguyen — Portfolio"
+title: "Tung Nguyen - Portfolio"
 email: tung051024@gmail.com
 description: "Security student — lab reports, projects, and write-ups."
 baseurl: ""
 url: "https://tung05.github.io"
 theme: minima
+skin : dark
 
 header_pages:
   - index.md
