@@ -5,14 +5,17 @@ baseurl: "/Tung05"
 url: "https://tung05.github.io"
 theme: jekyll-theme-cayman
 
-navbar:
-  - title: Home
-    url: /
-  - title: Projects
-    url: /projects/
-  - title: Contact
-    url: /contact/
+# navbar:
+#   - title: Home
+#     url: /
+#   - title: Projects
+#     url: /projects/
+#   - title: Contact
+#     url: /contact/
 
+header_pages:
+  - index.md
+  - projects/index.md
 
 paginate: 5
 exclude:
