@@ -40,8 +40,7 @@ Perform discovery and vulnerability remediation on a Metasploitable VM using Gre
 
 ## Table of Contents
 - [Vulnerability: Ingreslock Backdoor (Port 1524)](#vuln-ingreslock-backdoor-port-1524)  
-- [Vulnerability: <Next vulnerability title>](#vuln-next-vuln)  
-*(Add new vulnerabilities here in chronological order.)*
+- [Vulnerability: Rexec / r-services (Port 512)](#vulnerability-rexec-r-services-port-512)  
 
 ---
 
@@ -71,17 +70,44 @@ nmap -sT -p 1-65535 <target-ip>
 The `inetd` configuration contained an entry that spawned `/bin/bash` as root when the service was contacted. This effectively functions as a backdoor, allowing anyone who can connect to that port to obtain a root shell.
 
 **Evidence (pre-remediation):**
-- OpenVAS finding screenshot: `../images/IngresLock-OpenVAS.png`  
+- OpenVAS finding screenshot:  
   ![OpenVAS finding](../images/IngresLock-OpenVAS.png)
-- `nmap` scan showing port 1524 open (before remediation): `../images/ingreslock-scan-test.png`  
+- `nmap` scan showing port 1524 open (before remediation):
   ![Port 1524 open before remediation](../images/ingreslock-scan-test.png)
-- Snippet of `/etc/inetd.conf` showing the malicious entry: `../images/Inetd.conf-file.png`  
+- Snippet of `/etc/inetd.conf` showing the malicious entry:
   ![inetd.conf with malicious entry](../images/Inetd.conf-file.png)
 
 **Root cause analysis:**  
-A line in `/etc/inetd.conf` (the `inetd` super-server configuration) mapped the `ingreslock` service to `/bin/bash` and ran it as `root`. Since `inetd` launches the configured program with root privileges, any network connection to that service resulted in a root shell being spawned.
+A line in `/etc/inetd.conf` mapped the `ingreslock` service to `/bin/bash` and ran it as `root`. Since `inetd` launches the configured program with root privileges, any network connection to that service resulted in a root shell being spawned.
 
 **Remediation performed:**  
-1. Removed the malicious `ingreslock` line from `/etc/inetd.conf`.
+1. Removed the malicious `ingreslock` line (`ingreslock stream tcp nowait root /bin/bash bash -i`) from `/etc/inetd.conf`.
 2. Reboot to apply the change.
 3. Scan again using nmap to make sure the port is closed and unable to netcat to it anymore.
+
+
+### Vulnerability: Rexec / r‑services (Port 512)
+
+**Severity:** High  
+**OpenVAS ID / Reference:** NVT – *TCP Port 512: rexec (r‑services)*
+
+**Description (short):**  
+The target exposes the legacy `rexec` (r‑services) daemon on TCP port 512. R‑services transmit credentials in plaintext and are considered insecure; an exposed `rexec` allows remote command execution and is a significant misconfiguration.
+
+**Evidence (pre-remediation):**
+- OpenVAS finding screenshot:  
+  ![OpenVAS finding - rexec](/images/rexec-openvas.png)
+- `nmap` scan showing port 512 open (before remediation):  
+  ![nmap port 512 before remediation](/images/rexec-nmap-scan.png)
+- `inetd` configuration showing the `rexec` entry (example):  
+  ![inetd.conf with rexec entry](/images/rexec-inetd.conf-file.png)  
+  _Observed line (lab):_  
+exec stream tcp nowait root /usr/sbin/tcpd /usr/sbin/in.rexecd
+
+**Root cause analysis:**  
+The `rexec` service was enabled via the system's `inetd` configuration. Because rexec performs plaintext authentication and is rarely required, having it enabled on a networked host exposes credentials and allows remote execution.
+
+**Remediation performed:**  
+1. Removed/disabled the `rexec` entry (`exec stream tcp nowait root /usr/sbin/tcpd /usr/sbin/in.rexecd`) from the inetd configuration.
+2. Reboot to apply the change.
+3. Scan again using nmap to make sure the port is closed.
