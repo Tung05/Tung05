@@ -5,9 +5,9 @@ baseurl: "/Tung05"
 url: "https://tung05.github.io"
 theme: minima
 paginate: 5
-minima:
-  header_pages:
-    - index.md
-    - projects/index.md
+# minima:
+#   header_pages:
+#     - index.md
+#     - projects/index.md
 exclude:
   - README.md
