@@ -35,4 +35,7 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
 ## 📫 Connect with Me
 
-[LinkedIn](https://www.linkedin.com/in/tung0510/) | [GitHub](https://github.com/Tung05) | ✉️ tung051024@gmail.com
+**Email:** tung051024@gmail.com  
+**LinkedIn:** [https://www.linkedin.com/in/tung0510/](https://www.linkedin.com/in/tung0510/)  
+**GitHub:** [https://github.com/Tung05](https://github.com/Tung05)
+

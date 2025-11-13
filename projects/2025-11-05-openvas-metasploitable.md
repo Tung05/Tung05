@@ -51,7 +51,6 @@ Use this template to add additional vulnerabilities:
 ### Vulnerability: <SHORT TITLE> — <SERVICE / PORT>
 **Severity:** <High / Medium / Low>  
 **OpenVAS ID / Reference:** <OpenVAS NVT or CVE>  
-**Discovered:** YYYY-MM-DD
 
 **Description (short):**  
 A one-sentence summary of the issue.
@@ -65,13 +64,24 @@ nmap -sT -p 1-65535 <target-ip>
 ---
 
 ### Vulnerability: Ingreslock Backdoor (Port 1524)
-**Severity:** High 
-**OpenVAS ID / Reference:** NVT – TCP Port 1524: Ingreslock Backdoor 
-**Discovered:** 2025-11-05
+**Severity:** High  
+**OpenVAS ID / Reference:** NVT – *TCP Port 1524: Ingreslock Backdoor*
 
 **Description (short):**  
-inetd configuration contained a line that spawned /bin/bash as root when the service was contacted, a deliberate backdoor allowing remote root shell access.
+The `inetd` configuration contained an entry that spawned `/bin/bash` as root when the service was contacted. This effectively functions as a backdoor, allowing anyone who can connect to that port to obtain a root shell.
 
 **Evidence (pre-remediation):**
-- GVM finding screenshot: `/images/<filename>`  
-- `nmap` or port scan output:
+- OpenVAS finding screenshot: `../images/IngresLock-OpenVAS.png`  
+  ![OpenVAS finding](../images/IngresLock-OpenVAS.png)
+- `nmap` scan showing port 1524 open (before remediation): `../images/ingreslock-scan-test.png`  
+  ![Port 1524 open before remediation](../images/ingreslock-scan-test.png)
+- Snippet of `/etc/inetd.conf` showing the malicious entry: `../images/Inetd.conf-file.png`  
+  ![inetd.conf with malicious entry](../images/Inetd.conf-file.png)
+
+**Root cause analysis:**  
+A line in `/etc/inetd.conf` (the `inetd` super-server configuration) mapped the `ingreslock` service to `/bin/bash` and ran it as `root`. Since `inetd` launches the configured program with root privileges, any network connection to that service resulted in a root shell being spawned.
+
+**Remediation performed:**  
+1. Removed the malicious `ingreslock` line from `/etc/inetd.conf`.
+2. Reboot to apply the change.
+3. Scan again using nmap to make sure the port is closed and unable to netcat to it anymore.
