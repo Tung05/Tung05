@@ -3,8 +3,9 @@ email: tung051024@gmail.com
 description: "Security student — lab reports, projects, and write-ups."
 baseurl: ""
 url: "https://tung05.github.io"
-theme: jekyll-theme-cayman
+theme: jekyll-theme-midnight
 
+# Navigation bar
 navbar:
   - title: Home
     url: /
@@ -13,6 +14,9 @@ navbar:
   - title: Contact
     url: /contact/
 
+# Blog / pagination settings
 paginate: 5
+
+# Files to exclude from the site
 exclude:
   - README.md

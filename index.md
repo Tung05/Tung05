@@ -13,7 +13,7 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
 ## 🌟 Featured Projects
 
-- [OpenVAS → Metasploitable lab — NVT & Ingreslock remediation](projects/2025-11-05-openvas-metasploitable.md)  
+- [OpenVAS → Metasploitable lab](projects/2025-11-05-openvas-metasploitable.md)  
   _Used Greenbone OpenVAS to detect and fix the Ingreslock backdoor vulnerability on Metasploitable._
 
 - [AI Nowcasting Thunderstorm Model](#)  
