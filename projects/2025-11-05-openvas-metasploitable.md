@@ -1,8 +1,10 @@
 ---
-title: "OpenVAS scan & Metasploitable remediation"
+title: "OpenVAS → Metasploitable lab"
 date: 2025-11-05
 layout: post
 ---
+
+[Home](/) | [Projects](/projects/)
 
 # Lab: Kali (OpenVAS) → Metasploitable — Multi-vulnerability Remediation
 
