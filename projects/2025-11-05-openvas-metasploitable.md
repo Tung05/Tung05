@@ -1,5 +1,4 @@
 ---
-title: "OpenVAS → Metasploitable lab"
 date: 2025-11-05
 layout: page
 ---
