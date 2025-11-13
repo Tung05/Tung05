@@ -1,9 +1,8 @@
 ---
 layout: home
-title: "Home"
 ---
 
-# Hello — I'm Tung 👋
+# Hello, I'm Tung 👋
 
 I’m a senior at the University of Massachusetts Amherst studying Computer Science.  
 I’m passionate about **cybersecurity research**, **penetration testing**, and building **secure and efficient systems**.  

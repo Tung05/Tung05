@@ -4,12 +4,10 @@ description: "Security student — lab reports, projects, and write-ups."
 baseurl: ""
 url: "https://tung05.github.io"
 theme: minima
-# # Navigation bar
-# navbar:
-#   - title: Home
-#     url: /
-#   - title: Projects
-#     url: /projects/
+
+header_pages:
+  - index.md
+  - projects.md
 
 # Blog / pagination settings
 paginate: 5
