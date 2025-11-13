@@ -12,5 +12,5 @@ I’m a senior studying Computer Science at UMass Amherst. This site contains my
 ---
 
 ### Contact
-- GitHub: https://github.com/USER
-- LinkedIn: https://www.linkedin.com/in/your-linkedin
+- GitHub: https://github.com/Tung05
+- LinkedIn: https://www.linkedin.com/in/tung0510/
