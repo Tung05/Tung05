@@ -3,8 +3,6 @@ layout: home
 title: "Home"
 ---
 
-[Home](/) | [Projects](/projects/)
-
 # Hello — I'm Tung 👋
 
 I’m a senior at the University of Massachusetts Amherst studying Computer Science.  

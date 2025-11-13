@@ -4,7 +4,7 @@ date: 2025-11-05
 layout: post
 ---
 
-[Home](/) | [Projects](/projects/)
+[← Back to Projects](/projects/)
 
 # Lab: Kali (OpenVAS) → Metasploitable — Multi-vulnerability Remediation
 
