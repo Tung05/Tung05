@@ -1,0 +1,7 @@
+title: "Tung Nguyen — Portfolio"
+email: tung051024@gmail.com
+description: "Security student — lab reports, projects, and write-ups."
+baseurl: "" # leave empty
+url: "https://tung05.github.io/Tung05/" # change USER
+theme: minima   # simple built-in theme; you can change later
+paginate: 5
