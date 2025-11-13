@@ -7,7 +7,7 @@ theme: minima
 
 header_pages:
   - index.md
-  - projects.md
+  - projects/index.md
 
 # Blog / pagination settings
 paginate: 5
