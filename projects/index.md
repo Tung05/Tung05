@@ -11,7 +11,7 @@ nav-order: 2
 - [CVE-2019-18634: sudo pwfeedback Buffer Overflow - Writeup](projects/cs367-cve-2019-18634.md)  
   _Analyzes and reproduces CVE-2019-18634, a critical buffer overflow vulnerability in `sudo` triggered by the `pwfeedback` feature._
 
-- [Virtual Internship: Cybersecurity Simulation — Forage](projects/forage-cyber-simulation.md)
+- [Virtual Internship: Cybersecurity Simulation - Forage](projects/forage-cyber-simulation.md)
   _Virtual cybersecurity internship simulations at Mastercard & AIG, focusing on threat analysis, SOC workflows, and security awareness.
 
 - [Coming Soon!]()
