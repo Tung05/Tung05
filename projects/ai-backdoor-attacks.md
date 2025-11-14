@@ -1,5 +1,5 @@
 ---
-date: 2025-XX-XX
+date: 2025-05-12
 layout: page
 ---
 
@@ -9,7 +9,7 @@ layout: page
 
 **Summary:** Researched vulnerabilities in ML models, identifying backdoor attacks and mitigation strategies.
 
-## Full Paper
+**Full Paper**
 📄 [Download Full Paper (PDF)](../images/Backdoor%20in%20AI.pdf)
 
 ---
