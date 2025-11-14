@@ -42,7 +42,7 @@ Perform discovery and vulnerability remediation on a Metasploitable VM using Gre
 - [Vulnerability: Rexec / r-services (Port 512)](#vulnerability-rexec-r-services-port-512)  
 - [Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)](#vulnerability-mysql-mariadb-default-credentials-port-3306)
 
----
+<!-- ---
 
 ## Vulnerability Template
 Use this template to add additional vulnerabilities:
@@ -58,7 +58,7 @@ A one-sentence summary of the issue.
 - GVM finding screenshot: `/images/<filename>`  
 - `nmap` or port scan output:
 # Example
-nmap -sT -p 1-65535 <target-ip>
+nmap -sT -p 1-65535 <target-ip> -->
 
 ---
 
