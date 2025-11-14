@@ -1,6 +1,8 @@
 ---
 title: "My Projects"
 layout: page
+nav-include: true
+nav-order: 2
 ---
 
 - [OpenVAS → Metasploitable lab](projects/2025-11-05-openvas-metasploitable.md)  

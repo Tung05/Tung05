@@ -1,6 +1,8 @@
 ---
 layout: home
 title: "About"
+nav-include: true
+nav-order: 1
 ---
 
 `Hello, I'm Tung 👋`
