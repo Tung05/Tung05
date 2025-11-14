@@ -1,6 +1,5 @@
 ---
 layout: home
-title: "About"
 ---
 
 `Hello, I'm Tung 👋`
