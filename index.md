@@ -1,6 +1,6 @@
 ---
 layout: home
-# title: "About"
+title: "About"
 ---
 
 `Hello, I'm Tung 👋`
@@ -8,16 +8,7 @@ layout: home
 I’m a senior at the University of Massachusetts Amherst studying Computer Science.  
 I’m passionate about **cybersecurity research**, **penetration testing**, and building **secure and efficient systems**.  
 This site showcases my **security labs**, **CTF writeups**, and **projects**.
-
----
-
-## 🌟 Featured Projects
-
-- [OpenVAS → Metasploitable lab](projects/2025-11-05-openvas-metasploitable.md)  
-  _Used Greenbone OpenVAS to detect and fix the Ingreslock backdoor vulnerability on Metasploitable._
-
-- [CVE-2019-18634: sudo pwfeedback Buffer Overflow - Writeup](projects/cs367-cve-2019-18634.md)  
-  _Analyzes and reproduces CVE-2019-18634, a critical buffer overflow vulnerability in `sudo` triggered by the `pwfeedback` feature._
+📄 [Download my Resume (PDF)](assets/pdfs/Tung-Nguyen-Resume.pdf)
 
 ---
 
@@ -30,6 +21,15 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 ![Python](https://img.shields.io/badge/-Python-3776AB?style=flat-square&logo=python&logoColor=white)
 ![Kali Linux](https://img.shields.io/badge/-KaliLinux-557C94?style=flat-square&logo=kali-linux&logoColor=white)
 ![Metasploit](https://img.shields.io/badge/-Metasploit-CC0000?style=flat-square&logo=metasploit&logoColor=white)
+
+---
+
+## 🌟 Certificates
+
+- [**Google Cybersecurity Certificate**](images/Certs/GoogleCybersecurity.pdf) — Completed  
+- [**CodePath CYB102: Intermediate Cybersecurity**](images/Certs/CYB102_Codepath.pdf) — Completed  
+- [**TryHackMe Cyber Security 101**](images/Certs/THM-PS23ZROUXA.pdf) - Completed
+- [**CompTIA Security+**]() — Incoming / In Progress
 
 ---
 
