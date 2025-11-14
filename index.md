@@ -3,7 +3,7 @@ layout: home
 title: "About"
 ---
 
-# Hello, I'm Tung 👋
+`Hello, I'm Tung 👋`
 
 I’m a senior at the University of Massachusetts Amherst studying Computer Science.  
 I’m passionate about **cybersecurity research**, **penetration testing**, and building **secure and efficient systems**.  
@@ -16,8 +16,8 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 - [OpenVAS → Metasploitable lab](projects/2025-11-05-openvas-metasploitable.md)  
   _Used Greenbone OpenVAS to detect and fix the Ingreslock backdoor vulnerability on Metasploitable._
 
-- [AI Nowcasting Thunderstorm Model](#)  
-  _Built an AI-powered model using radar data achieving 92% accuracy and 50% faster runtime._
+- [CVE-2019-18634: sudo pwfeedback Buffer Overflow - Writeup](projects/cs367-cve-2019-18634.md)  
+  _Analyzes and reproduces CVE-2019-18634, a critical buffer overflow vulnerability in `sudo` triggered by the `pwfeedback` feature._
 
 ---
 
