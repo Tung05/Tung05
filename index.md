@@ -11,7 +11,7 @@ I’m a senior at the University of Massachusetts Amherst studying Computer Scie
 I’m passionate about **cybersecurity research**, **penetration testing**, and building **secure and efficient systems**.  
 This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
-📄 [Download my Resume (PDF)](assets/pdfs/Tung-Nguyen-Resume.pdf)
+📄 [Download my Resume (PDF)](images/Certs/Tung Nguyen Resume.pdf)
 
 ---
 
