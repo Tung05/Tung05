@@ -29,10 +29,10 @@ This site showcases my **security labs**, **CTF writeups**, and **projects**.
 
 ## 🌟 Certificates
 
-- [**Google Cybersecurity Certificate**](images/Certs/GoogleCybersecurity.pdf) — Completed  
-- [**CodePath CYB102: Intermediate Cybersecurity**](images/Certs/CYB102_Codepath.pdf) — Completed  
-- [**TryHackMe Cyber Security 101**](images/Certs/THM-PS23ZROUXA.pdf) - Completed
-- [**CompTIA Security+**]() — Incoming / In Progress
+- [**Google Cybersecurity Certificate**](images/Certs/GoogleCybersecurity.pdf) -- Completed  
+- [**CodePath CYB102: Intermediate Cybersecurity**](images/Certs/CYB102_Codepath.pdf) -- Completed  
+- [**TryHackMe Cyber Security 101**](images/Certs/THM-PS23ZROUXA.pdf) -- Completed
+- [**CompTIA Security+**]() -- Incoming / In Progress
 
 ---
 
