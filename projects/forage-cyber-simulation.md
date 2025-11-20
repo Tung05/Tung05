@@ -12,8 +12,7 @@ layout: page
 ---
 
 ## Mastercard Cybersecurity Virtual Experience Program - November 2025
-![Mastercard Certificate](images\Certs\Mastercard Certificate.pdf)
-
+[Mastercard Certificate](<../images/Certs/Mastercard Certificate.pdf>)
 - Participated in a virtual internship simulating the role of an analyst on Mastercard’s Security Awareness Team.  
 - Identified and reported security threats, including phishing campaigns.  
 - Analyzed business areas requiring stronger security training and proposed actionable improvements.  
@@ -21,7 +20,7 @@ layout: page
 ---
 
 ## AIG Shields Up: Cybersecurity Virtual Experience Program - November 2025
-![AIG Certificate](images\Certs\AIG Cert.pdf)
+![AIG Certificate](<../images/Certs/AIG Cert.pdf>)
 
 - Completed a cybersecurity threat analysis simulation for AIG’s Cyber Defense Unit.  
 - Stayed updated on CISA publications to identify emerging vulnerabilities.  
