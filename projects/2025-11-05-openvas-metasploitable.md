@@ -41,6 +41,7 @@ Perform discovery and vulnerability remediation on a Metasploitable VM using Gre
 - [Vulnerability: Ingreslock Backdoor (Port 1524)](#vulnerability-ingreslock-backdoor-port-1524)  
 - [Vulnerability: Rexec / r-services (Port 512)](#vulnerability-rexec-r-services-port-512)  
 - [Vulnerability: MySQL / MariaDB Default Credentials (Port 3306)](#vulnerability-mysql-mariadb-default-credentials-port-3306)
+- [Vulnerability: vsftpd 2.3.4 Backdoored Version (Ports 21 & 6200)](#vulnerability-vsftpd-2-3-4-backdoored-version-ports-21-6200)
 
 <!-- ---
 
@@ -138,3 +139,65 @@ The MySQL instance was left with a blank/weak root password and accepted remote 
 ![Change password and test login without it](../images/mysql-change-password.png)
 3. Test login again with password -> Success
 ![Successful login with the correct password](../images/mysql-test-login.png)
+
+---
+
+### Vulnerability: vsftpd 2.3.4 Backdoored Version (Ports 21 & 6200) {#vulnerability-vsftpd-2-3-4-backdoored-version-ports-21-6200}
+
+**Severity:** High  
+**OpenVAS ID / Reference:** NVT – *vsftpd Compromised Source Packages Backdoor Vulnerability* (CVE-2011-2523)
+
+**Description (short):**  
+The system was running the backdoored version of **vsftpd 2.3.4**, which contains a hidden backdoor that spawns a remote shell on port **6200/tcp** when triggered by a malformed FTP login (username containing `:)`). This allows full remote compromise of the host.
+
+**Evidence (pre-remediation):**
+- OpenVAS finding showing vsftpd 2.3.4 running on port **21** and **6200**:
+  ![vsftpd found port21](../images/vsftpd-port-21-detect.png)
+  ![vsftpd found port6200](../images/vsftpd-port-6200-detect.png)
+- Nmap showing vsftpd version 2.3.4 running:  
+  ![vsftpd 2.3.4 running](../images/vsftpd-nmap-confirm-version.png)
+- Metasploit successfully exploited the backdoor and obtained a shell:  
+  ![vsftpd version evidence](../images/vsftpd-metasploit-confirm.png)
+
+**Root cause analysis:**  
+A compromised upstream source package of vsftpd 2.3.4 was installed. This tainted version was distributed for several days in July 2011, and any system using it exposes a built-in backdoor. When triggered, the service opens a command shell on port 6200, giving attackers full remote code execution.
+
+**Remediation performed:**  
+1. Since Metasploitable 2 uses outdated repositories and cannot be updated normally, the secure remediation is to remove the vulnerable vsftpd 2.3.4 entirely.
+![vsftpd removing](../images/vsftpd-removed.png)
+2. Verified that:
+- Port **21** no longer runs vsftpd 2.3.4  and Port **6200** is closed:
+![vsftpd confirm removed](../images/vsftpd-nmap-confirm-removed.png)
+- Metasploit now fail:
+![vsftpd remediation success](../images/vsftpd-metasploit-fail.png)
+ 
+ ---
+
+### Vulnerability: rlogin Passwordless Login (Port 513){#vulnerability-rlogin-passwordless-login-port-513}
+**Severity:** High  
+**OpenVAS ID / Reference:** NVT – *rlogin Service Allows Passwordless Login*
+
+**Description (short):**  
+The `rlogin` service on port 513 allowed remote login without requiring a password, giving attackers direct shell access over the network. This is caused by legacy `r‑services` being enabled in `/etc/inetd.conf`.
+
+**Evidence (pre-remediation):**
+- OpenVAS finding screenshot:  
+  ![OpenVAS finding](../images/rlogin-openvas.png)
+- `nmap` scan showing port 513 open:
+  ![Port 513 open before remediation](../images/rlogin-nmap-scan-yes.png)
+- Snippet of `/etc/inetd.conf` showing the malicious entry:
+  ![inetd.conf with malicious entry](../images/rlogin-inetd-conf.png)
+- Successful attempt to use rlogin passwordless:
+  !![rlogin Passwordless success](../images/rlogin-access-success.png)
+
+**Root cause analysis:**  
+The Metasploitable machine had the legacy rlogind service enabled through inetd.
+The following entry existed in /etc/inetd.conf:
+`login stream tcp nowait root /usr/sbin/tcpd /usr/sbin/in.rlogind`
+rlogin trusts remote hosts and uses plaintext communication, often allowing logins with no password, resulting in full user compromise (and privilege escalation in many cases).
+
+**Remediation performed:**  
+1. Removed the malicious line from `/etc/inetd.conf`.
+2. Reboot to apply the change.
+3. Scan again using nmap to make sure the port is closed and unable to attemp passwordless rlogin:
+  ![rlogin Passwordless remediation success](../images/rlogin-test-after-rem.png)
