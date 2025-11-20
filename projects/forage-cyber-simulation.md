@@ -20,7 +20,7 @@ layout: page
 ---
 
 ## AIG Shields Up: Cybersecurity Virtual Experience Program - November 2025
-![AIG Certificate](<../images/Certs/AIG Cert.pdf>)
+[AIG Certificate](<../images/Certs/AIG Cert.pdf>)
 
 - Completed a cybersecurity threat analysis simulation for AIG’s Cyber Defense Unit.  
 - Stayed updated on CISA publications to identify emerging vulnerabilities.  
