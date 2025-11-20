@@ -5,13 +5,13 @@ layout: page
 
 [← Back to Projects](/projects/)
 
-# Virtual Internships: Cybersecurity Simulations — Forage
+# Virtual Internships: Cybersecurity Simulations - Forage
 
 **Summary:** Completed hands-on virtual cybersecurity simulations at Mastercard and AIG to practice threat analysis, phishing detection, and SOC workflows.
 
 ---
 
-## Mastercard Cybersecurity Virtual Experience Program — November 2025
+## Mastercard Cybersecurity Virtual Experience Program - November 2025
 ![Mastercard Certificate](images\Certs\Mastercard Certificate.pdf)
 
 - Participated in a virtual internship simulating the role of an analyst on Mastercard’s Security Awareness Team.  
@@ -20,7 +20,7 @@ layout: page
 
 ---
 
-## AIG Shields Up: Cybersecurity Virtual Experience Program — November 2025
+## AIG Shields Up: Cybersecurity Virtual Experience Program - November 2025
 ![AIG Certificate](images\Certs\AIG Cert.pdf)
 
 - Completed a cybersecurity threat analysis simulation for AIG’s Cyber Defense Unit.  

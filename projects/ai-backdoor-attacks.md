@@ -5,7 +5,7 @@ layout: page
 
 [← Back to Projects](/projects/)
 
-# Backdoor Attacks in AI Models — Research Paper
+# Backdoor Attacks in AI Models - Research Paper
 
 **Summary:** Researched vulnerabilities in ML models, identifying backdoor attacks and mitigation strategies.
 

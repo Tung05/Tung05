@@ -5,7 +5,7 @@ layout: page
 
 [← Back to Projects](/projects/)
 
-# Lab: Kali (OpenVAS) → Metasploitable — Multi-vulnerability Remediation
+# Lab: Kali (OpenVAS) → Metasploitable - Multi-vulnerability Remediation
 
 **Author:** Tung Nguyen  
 **Date:** 2025-11-05  

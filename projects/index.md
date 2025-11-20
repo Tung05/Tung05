@@ -14,7 +14,7 @@ nav-order: 2
 - [Virtual Internship: Cybersecurity Simulation - Forage](./forage-cyber-simulation.md)
   _Virtual cybersecurity internship simulations at Mastercard & AIG, focusing on threat analysis, SOC workflows, and security awareness.
 
-- [Backdoor Attacks in AI Models — Research Paper](./ai-backdoor-attacks.md)  
+- [Backdoor Attacks in AI Models - Research Paper](./ai-backdoor-attacks.md)  
   _Research paper analyzing backdoor vulnerabilities in ML models, exploring Trojan attacks, BadNets, and proposing defense mechanisms like data vetting and adversarial retraining._
 
 - [Coming Soon!]()
